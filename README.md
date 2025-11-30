@@ -44,15 +44,19 @@
 
 ## 🎯 Overview
 
-**META CAR SHOWROOM** is a cutting-edge, photorealistic 3D automotive visualization platform built with Unity's High Definition Render Pipeline (HDRP). Designed for automotive enthusiasts, dealerships, and developers, this application delivers cinema-quality rendering with real-time interactivity.
+**META CAR SHOWROOM** is a cutting-edge, photorealistic 3D automotive visualization application built with Unity's High Definition Render Pipeline (HDRP). This repository contains the **pre-built executable** for Windows, ready to download and run.
+
+> [!IMPORTANT]
+> **This repository contains a compiled executable, not Unity project source files.**  
+> You cannot open this in Unity Editor. If you need the Unity source project to modify or rebuild, please contact the repository owner.
 
 ### 🎨 What Makes It Special?
 
-- **Photorealistic Rendering**: Leveraging Unity HDRP's advanced lighting and material systems
+- **Photorealistic Rendering**: Built with Unity HDRP's advanced lighting and material systems
 - **Real-time Ray Tracing**: Dynamic reflections, global illumination, and ambient occlusion
 - **Cinematic Camera System**: Smooth camera controls powered by Cinemachine
-- **Production-Ready**: Optimized for performance and scalability
-- **Cross-Platform**: Native support for Windows and macOS
+- **Ready to Run**: Pre-built executable, no Unity installation required
+- **Windows Compatible**: Optimized for Windows 10/11 (64-bit)
 
 ---
 
@@ -110,49 +114,27 @@
 
 ## 🚀 Quick Start
 
-### For End Users (Pre-built Application)
+### Download and Run (Windows)
 
-#### Windows
+#### Option 1: Clone from GitHub
+```bash
+# Clone the repository
+git clone https://github.com/pavanganeshpg/META-CAR-SHOWROOM.git
+cd META-CAR-SHOWROOM
+
+# Run the executable
+./HDRP_car.exe
+```
+
+#### Option 2: Download Release
 1. **Download** the latest release from [Releases](https://github.com/pavanganeshpg/META-CAR-SHOWROOM/releases)
 2. **Extract** the ZIP file to your desired location
 3. **Run** `HDRP_car.exe`
 4. **Enjoy** the immersive car showroom experience!
 
-#### macOS
-1. **Download** the macOS build from [Releases](https://github.com/pavanganeshpg/META-CAR-SHOWROOM/releases)
-2. **Extract** and move the app to your Applications folder
-3. **Right-click** and select "Open" (first time only, due to Gatekeeper)
-4. **Launch** and explore!
-
-### For Developers (Unity Project)
-
-#### Prerequisites
-```bash
-# Ensure you have Git installed
-git --version
-
-# Ensure you have Unity Hub installed
-# Download from: https://unity.com/download
-```
-
-#### Clone the Repository
-```bash
-git clone https://github.com/pavanganeshpg/META-CAR-SHOWROOM.git
-cd META-CAR-SHOWROOM
-```
-
-#### Open in Unity
-1. Launch **Unity Hub**
-2. Click **"Add"** → Select the cloned `META-CAR-SHOWROOM` folder
-3. Ensure Unity **2021.3 LTS** or newer is installed
-4. Open the project (Unity will import assets and compile scripts)
-5. Navigate to `Assets/Scenes/MainScene.unity`
-6. Press **Play** to run in the editor
-
-#### Install HDRP (if not already installed)
-```
-Window → Package Manager → Unity Registry → High Definition RP → Install
-```
+> [!NOTE]
+> **For Developers:** This repository does not contain Unity project source files (Assets/, ProjectSettings/, etc.).  
+> If you need to modify the project or build from source, please contact [@pavanganeshpg](https://github.com/pavanganeshpg) for access to the Unity project.
 
 ---
 
@@ -229,49 +211,27 @@ META-CAR-SHOWROOM/
 
 ---
 
-## 🔨 Build Instructions
+## 🔨 Build Information
 
-### Building from Unity Editor
+### About This Build
 
-#### 1. Configure Build Settings
-```
-File → Build Settings
-```
-- **Platform**: Select `PC, Mac & Linux Standalone`
-- **Target Platform**: Windows or macOS
-- **Architecture**: x86_64 (64-bit)
-- **Scenes**: Ensure `MainScene` is added
+This executable was built using:
+- **Unity Version**: 2021.3 LTS (or newer)
+- **Render Pipeline**: High Definition Render Pipeline (HDRP)
+- **Platform**: Windows x64
+- **Build Type**: Standalone
 
-#### 2. Player Settings
-```
-Edit → Project Settings → Player
-```
-- **Company Name**: Your company/team name
-- **Product Name**: META CAR SHOWROOM
-- **Icon**: Set custom application icon
-- **Splash Screen**: Configure Unity splash screen
+### Rebuilding from Source
 
-#### 3. Quality Settings
-```
-Edit → Project Settings → Quality
-```
-- **Default Quality Level**: Ultra (for HDRP)
-- **VSync**: On (for smooth rendering)
-- **Anti-Aliasing**: TAA (Temporal Anti-Aliasing)
+> [!WARNING]
+> **Unity project source files are not included in this repository.**
 
-#### 4. Build
-```
-File → Build Settings → Build
-```
-- Choose output directory
-- Click **Build** (or **Build and Run**)
+This repository contains only the compiled executable. To rebuild or modify the project, you would need:
+1. Unity Editor 2021.3 LTS or newer
+2. The original Unity project source files (Assets/, ProjectSettings/, Packages/)
+3. HDRP package installed
 
-### Automated Build (CI/CD)
-
-For automated builds using Unity Cloud Build or GitHub Actions, refer to:
-```
-.github/workflows/build.yml  # (Coming soon)
-```
+If you need access to the Unity source project, please open an issue or contact the repository owner.
 
 ---
 
